@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Openings Web Page</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        font-family: Georgia;
+      }
+      .header header nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background-color: #151269;
+      }
+      .left-menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        /* background-color: pink; */
+      }
+      #logo {
+        width: 65px;
+        height: 65px;
+        padding: 10px;
+        /* background-color: red; */
+        cursor: pointer;
+      }
+      #logo-name {
+        font-size: large;
+        font-weight: bold;
+        padding: 2px;
+        color: white;
+        font-style: italic;
+        /* background-color: purple; */
+        cursor: pointer;
+      }
+      .right-menu ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        list-style: none;
+        /* background-color: brown; */
+        height: 35px;
+        width: 800px;
+      }
+      .right-menu ul li a {
+        text-decoration: none;
+        /* background-color: pink; */
+        color: white;
+        font-size: larger;
+        font-weight: bold;
+        padding: 25px;
+        border-radius: 4px;
+      }
+      .right-menu ul li a:hover {
+        color: rgb(241, 179, 8);
+        text-decoration: underline;
+      }
+      .main {
+        width: 100%;
+        height: 500px;
+        /* background-color: pink; */
+      }
+      .job-heading {
+        text-align: center;
+        /* background-color: yellow; */
+        padding: 25px;
+      }
+      .jobs {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        /* background-color: aqua; */
+      }
+      .job1 {
+        width: 320px;
+        height: 400px;
+        margin: 15px;
+        background-color: #000053;
+        border-radius: 4px;
+      }
+      .job2 {
+        width: 320px;
+        height: 400px;
+        margin: 15px;
+        background-color: #000053;
+        border-radius: 4px;
+      }
+      .job3 {
+        width: 320px;
+        height: 400px;
+        margin: 15px;
+        background-color: #000053;
+        border-radius: 4px;
+      }
+      .job4 {
+        width: 320px;
+        height: 400px;
+        margin: 15px;
+        background-color: #000053;
+        border-radius: 4px;
+      }
+      .our-team .team-heading h2 {
+        text-align: center;
+        /* background-color: yellow; */
+        padding: 25px;
+        font-style: italic;
+      }
+      .our-team .team {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #151269;
+      }
+      .main .our-team .team .team-details p {
+        color: white;
+        font-size: larger;
+        margin: 40px;
+        line-height: 170%;
+      }
+      .main .our-team .team .team-image img {
+        margin: 30px;
+        border-radius: 10px;
+      }
+      .main .jobs .job1 .job1-heading, .main .jobs .job2 .job2-heading, .main .jobs .job3 .job3-heading, .main .jobs .job4 .job4-heading{
+        color: white;
+        font-size: x-large;
+        text-align: center;
+        text-decoration: underline;
+        margin: 10px;
+        padding: 5px;
+        /* background-color: pink; */
+      }
+      .main .jobs .job1 .job1-skills span, .main .jobs .job2 .job2-skills span, .main .jobs .job3 .job3-skills span, .main .jobs .job4 .job4-skills span{
+        font-size: x-large;
+        color: red;
+        margin: 10px;
+        padding: 5px;
+        /* background-color: pink; */
+    }
+      .main .jobs .job1 .job1-skills ul, .main .jobs .job2 .job2-skills ul, .main .jobs .job3 .job3-skills ul, .main .jobs .job4 .job4-skills ul{
+        list-style: none;
+        font-size: medium;
+        margin-left: 30px;
+        padding: 10px;
+        color: white;
+        /* background-color: red; */
+    }
+    .main .jobs .job1 .job1-salary span, .main .jobs .job2 .job2-salary span, .main .jobs .job3 .job3-salary span, .main .jobs .job4 .job4-salary span{
+        color: red;
+        font-size: x-large;
+        margin: 10px;
+        padding: 5px;
+    }
+    .main .jobs .job1 .job1-salary p, .main .jobs .job2 .job2-salary p, .main .jobs .job3 .job3-salary p, .main .jobs .job4 .job4-salary p{
+        font-size: medium;
+        margin-left: 30px;
+        padding: 3px;
+        color: white;
+    }
+    .main .jobs .job1 .job1-working-professionals span, .main .jobs .job2 .job2-working-professionals span, .main .jobs .job3 .job3-working-professionals span, .main .jobs .job4 .job4-working-professionals span{
+        font-size: x-large;
+        color: red;
+        margin: 10px;
+        padding: 5px;
+    }
+    .main .jobs .job1 .job1-working-professionals ul, .main .jobs .job2 .job2-working-professionals ul, .main .jobs .job3 .job3-working-professionals ul, .main .jobs .job4 .job4-working-professionals ul{
+        list-style: none;
+        font-size: medium;
+        margin-left: 30px;
+        padding: 3px;
+        color: white;
+    }
+    .main .jobs .job1 .job1-applynow button, .main .jobs .job2 .job2-applynow button, .main .jobs .job3 .job3-applynow button, .main .jobs .job4 .job4-applynow button{
+        font-size: larger;
+        width: 125px;
+        height: 45px;
+        margin: 8px 5px 5px 100px;
+        background-color: #4caf50;
+        border-radius: 5px;
+        border: 2px solid white;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .footer footer .social-links h2{
+        text-align: center;
+        /* background-color: yellow; */
+        padding: 25px;
+    }
+    .footer footer .social-links p{
+        height: 60px;
+        background-color: pink;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .footer footer .social-links i{
+        
+        font-size: 35px;
+        padding: 15px;
+        align-items: center;
+    }
+    .footer footer .lower-footer{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: black;
+    }
+    .footer footer .lower-footer .copyright{
+        font-size: large;
+        color: white;
+        margin: 20px;
+        padding: 5px;
+    }
+    .footer footer .lower-footer .pages ul{
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .footer footer .lower-footer .pages ul a{
+        text-decoration: none;
+        font-size: large;
+        color: white;
+        padding: 20px;
+    }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <div class="body">
+      <div class="header">
+        <header>
+          <nav>
+            <div class="left-menu">
+              <table>
+                <tr>
+                  <td>
+                    <img
+                      id="logo"
+                      src="/03_Images/03_javascript_logo.png"
+                      alt="javascript_logo"
+                    />
+                  </td>
+                  <td><span id="logo-name">Flipkart</span></td>
+                </tr>
+              </table>
+            </div>
+            <div class="right-menu">
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+          </nav>
+        </header>
+      </div>
+      <div class="main">
+        <main>
+          <section class="job-listings">
+            <div class="job-heading">
+              <h2>Job Openings</h2>
+            </div>
+            <div class="jobs">
+              <div class="job1">
+                <div class="job1-heading"><p>FrontEnd Developer</p></div>
+                <div class="job1-skills">
+                    <span>Required Skills</span>
+                  <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Tailwind CSS</li>
+                    <li>Javascript</li>
+                    <li>Reacts JS</li>
+                  </ul>
+                </div>
+                <div class="job1-salary">
+                    <span>Salary</span>
+                  <p>
+                    Rs. 25000 - Rs. 30000
+                    <p>Depending Upon Quality of the Work</p>
+                  </p>
+                </div>
+                <div class="job1-working-professionals">
+                    <span>Who Can Apply</span>
+                  <ul>
+                    <li>Freshers</li>
+                    <li>Experienced</li>
+                  </ul>
+                  <div class="job1-applynow"><button>Apply Now</button></div>
+                </div>
+              </div>
+              <div class="job2">
+                <div class="job2-heading"><p>FrontEnd Developer</p></div>
+                <div class="job2-skills">
+                    <span>Required Skills</span>
+                  <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Tailwind CSS</li>
+                    <li>Javascript</li>
+                    <li>Reacts JS</li>
+                  </ul>
+                </div>
+                <div class="job2-salary">
+                    <span>Salary</span>
+                  <p>
+                    Rs. 25000 - Rs. 30000
+                    <p>Depending Upon Quality of the Work</p>
+                  </p>
+                </div>
+                <div class="job2-working-professionals">
+                    <span>Who Can Apply</span>
+                  <ul>
+                    <li>Freshers</li>
+                    <li>Experienced</li>
+                  </ul>
+                  <div class="job2-applynow"><button>Apply Now</button></div>
+                </div>
+              </div>
+              <div class="job3">
+                <div class="job3-heading"><p>FrontEnd Developer</p></div>
+                <div class="job3-skills">
+                    <span>Required Skills</span>
+                  <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Tailwind CSS</li>
+                    <li>Javascript</li>
+                    <li>Reacts JS</li>
+                  </ul>
+                </div>
+                <div class="job3-salary">
+                    <span>Salary</span>
+                  <p>
+                    Rs. 25000 - Rs. 30000
+                    <p>Depending Upon Quality of the Work</p>
+                  </p>
+                </div>
+                <div class="job3-working-professionals">
+                    <span>Who Can Apply</span>
+                  <ul>
+                    <li>Freshers</li>
+                    <li>Experienced</li>
+                  </ul>
+                  <div class="job3-applynow"><button>Apply Now</button></div>
+                </div>
+              </div>
+              <div class="job4">
+                <div class="job4-heading"><p>FrontEnd Developer</p></div>
+                <div class="job4-skills">
+                    <span>Required Skills</span>
+                  <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Tailwind CSS</li>
+                    <li>Javascript</li>
+                    <li>Reacts JS</li>
+                  </ul>
+                </div>
+                <div class="job4-salary">
+                    <span>Salary</span>
+                  <p>
+                    Rs. 25000 - Rs. 30000
+                    <p>Depending Upon Quality of the Work</p>
+                  </p>
+                </div>
+                <div class="job4-working-professionals">
+                    <span>Who Can Apply</span>
+                  <ul>
+                    <li>Freshers</li>
+                    <li>Experienced</li>
+                  </ul>
+                  <div class="job4-applynow"><button>Apply Now</button></div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="our-team">
+            <div class="team-heading"><h2>What is Our Aim</h2></div>
+            <div class="team">
+              <div class="team-details">
+                <p>
+                  We are looking for active Web Development Enthusiast who are
+                  currently Unemployed. We are providing employment to them in
+                  various fields. Don't expect any salary from us. We are
+                  working for a Social Cause. Get experience in the field of
+                  technology and apply in good companies after one year. Learn
+                  Data Structures and Algorithms from YouTube. Also, learn MERN
+                  Stack. If you don't get a Job Open a YouTube Channel and teach
+                  people How to Land a Job in 2024. Tell them to do so to three
+                  other peoples and keep adding up people like in network
+                  marketing. When you have lots of contact start selling your
+                  vestige product.
+                </p>
+              </div>
+              <div class="team-image">
+                <img src="/03_Images/06_teams_logo.jpeg" alt="teams_logo" />
+              </div>
+            </div>
+          </section>
+        </main>
+        <div class="footer">
+            <footer>
+                <div class="social-links">
+                    <h2>Social Links</h2>
+                    <p>
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-linkedin"></i>
+                        <i class="fa-brands fa-youtube"></i>
+                        <i class="fa-brands fa-github"></i>
+                    </p>
+                </div>
+                <div class="lower-footer">
+                    <div class="copyright">
+                        <p>Copyright 2020 - 2024</p>
+                    </div>
+                    <div class="pages">
+                        <ul>
+                            <li><a href="">About Us</a></li>
+                            <li><a href="">Contact Us</a></li>
+                            <li><a href="">Privacy Policy</a></li>
+                            <li><a href="">Disclaimer</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+        </div>
+      </div>
+  </body>
+</html>

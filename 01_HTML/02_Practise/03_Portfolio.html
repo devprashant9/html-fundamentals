@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Using HTML</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        header nav ul{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            list-style: none;
+        }
+        header nav ul li{
+            margin: 20px;
+        }
+        header nav ul li a{
+            text-decoration: none;
+            font-size: large;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: tomato;
+        }
+        h2{
+            margin-left: 20px;
+            color: aqua;
+        }
+        section p{
+            color: orange;
+            margin-left: 20px;
+            margin-top: 5px;
+            display: inline-block;
+        }
+        section .para{
+            margin-left: 3px;
+        }
+        .education_details{
+            margin-top: 20px;
+            margin-left: 20px;
+            color: blueviolet;
+            font-size: xx-large;
+        }
+        table tr th{
+            color: orange;
+            font-size: larger;
+            margin-left: 40px;
+        }
+        table tr td{
+            color: white;
+            font-size: larger;
+            padding: 20px;
+        }
+        .skills li{
+            margin-left: 40px;
+            font-size: large;
+            padding: 10px;
+            color: orange;
+        }
+        .details{
+            font-size: large;
+        }
+        .social li{
+            margin-left: 30px;
+            font-size: larger;
+            padding: 7px;
+            list-style: none;
+        }
+        .social li a{
+            text-decoration: none;
+            color: #1675f0
+        }
+        form input{
+            margin-left: ;
+        }
+        form label{
+            margin-left: 30px;
+            color: orange;
+            font-size: large;
+            padding: 5px;
+        }
+        form input[type="submit"]{
+            margin-left: 200px;
+            border: none;
+            width: 75px;
+            height: 35px;
+            color: white;
+            background-color: black;
+            border-radius: 5px;
+            font-size: large;
+            font-family: Georgia;
+            cursor: Pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="main">
+            <h2>Name: Prashant Kumar Jha</h2>
+            <p>Conatct: 1234567890</p>
+            <p class="para">|</p>
+            <p class="para">Email: xyz@gamil.com</p>
+        </section>
+        <section>
+            <p class="education_details">Introduction</p>
+            <p class="details">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias porro corrupti ad, qui, dignissimos, id aspernatur consequuntur reiciendis dicta ullam esse! Dignissimos minus excepturi laboriosam architecto sequi sint dolorum quas, sapiente sed iusto, eaque esse hic! Consectetur ipsa quae placeat, inventore ad a aspernatur suscipit, sint commodi debitis dolor unde!</p>
+        </section>
+        <section class="education">
+            <p class="education_details">Education Details</p>
+            <table border="1">
+                <tr>
+                    <th>Course</th>
+                    <th>Completion Year</th>
+                </tr>
+                <tr>
+                    <td>Class X</td>
+                    <td>2017</td>
+                </tr>
+                <tr>
+                    <td>Class XII</td>
+                    <td>2019</td>
+                </tr>
+                <tr>
+                    <td>Graduation</td>
+                    <td>2019 - 2023</td>
+                </tr>
+                <tr>
+                    <td>MCA</td>
+                    <td>2023 - 2025</td>
+                </tr>
+            </table>
+        </section>
+        <section class="skills">
+            <p class="education_details">Skills</p>
+            <ul class="skills">
+                <li>MERN Stack Developer</li>
+                <li>Data Structures and Algorithms</li>
+                <li>Javascript</li>
+                <li>Python</li>
+            </ul>
+        </section>
+        <section>
+            <p class="education_details">Social Links</p>
+            <ul class="social">
+                <li><a href="">LinkedIn</a></li>
+                <li><a href="">GitHub</a></li>
+                <li><a href="">YouTube</a></li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p class="education_details">Contact Form:</p>
+        <form action="">
+            <label for="name">Name: </label>
+            <input type="text">
+            <br>
+            <br>
+            <label for="email">Email: </label>
+            <input type="email">
+            <br>
+            <br>
+            <label for="contact">Message: </label>
+            <textarea name="message" id="message"></textarea>
+            <br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </footer>
+</body>
+</html>

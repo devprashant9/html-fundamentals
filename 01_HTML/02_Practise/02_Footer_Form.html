@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Footer Form</title>
+    <style>
+      h1 {
+        text-align: center;
+        color: aquamarine;
+      }
+      .contact_us {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: large;
+      }
+      form input {
+        border-radius: 4px;
+        width: 150px;
+        height: 20px;
+      }
+      form select {
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #d10000;
+        border-radius: 4px;
+        background-color: #420eff;
+      }
+      form label {
+        color: orange;
+        font-family: Georgia;
+      }
+      form input[type="submit"] {
+        width: 75px;
+        height: 35px;
+        background-color: brown;
+        font-size: large;
+        cursor: pointer;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav></nav>
+    </header>
+    <main>
+      <h1>Registration Form</h1>
+    </main>
+    <div class="contact_us">
+      <footer>
+        <form action="">
+          <label for="first_name">First Name: </label>
+          <input type="text" name="first_name" id="first_name" required />
+          <br />
+          <br />
+          <label for="last_name">Last Name: </label>
+          <input type="text" name="first_name" id="first_name" required />
+          <br />
+          <br />
+          <label for="email">Email: </label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="xyz@gmail.com"
+            required
+          />
+          <br />
+          <br />
+          <label for="password">Password: </label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Strong Password"
+            required
+          />
+          <br />
+          <p id="section">Choose Section:</p>
+          <label for="sectionA">
+            <input
+              type="radio"
+              value="sectionA"
+              name="section"
+              id="sectionA"
+            />Section A
+          </label>
+          <label for="sectionB">
+            <input
+              type="radio"
+              value="sectionB"
+              name="section"
+              id="sectionB"
+            />Section B
+          </label>
+          <label for="sectionC">
+            <input
+              type="radio"
+              value="sectionC"
+              name="section"
+              id="sectionC"
+            />Section C
+          </label>
+          <br />
+          <p id="subjects">Choose Subjects:</p>
+          <label for="mathematics">
+            <input
+              type="checkbox"
+              value="mathematics"
+              name="mathematics"
+              id="mathematics"
+            />Mathematics
+          </label>
+          <br />
+          <label for="Physics">
+            <input
+              type="checkbox"
+              value="physics"
+              name="physics"
+              id="physics"
+            />Physics
+          </label>
+          <br />
+          <label for="Chemistry">
+            <input
+              type="checkbox"
+              value="chemistry"
+              name="chemistry"
+              id="chemistry"
+            />Chemistry
+          </label>
+          <br />
+          <label for="computer">
+            <input
+              type="checkbox"
+              value="computer"
+              name="computer"
+              id="computer"
+            />Computer
+          </label>
+          <br />
+          <p id="school">Select School:</p>
+          <select name="school" id="school">
+            School
+            <option value="PBAS">PBAS</option>
+            <option value="National GEMS">National Gems</option>
+            <option value="Sid Academy">Sid Academy</option>
+            <option value="Kidzee">Kidzee</option>
+          </select>
+          <br />
+          <br />
+          <textarea
+            name="feedback"
+            id="feedback"
+            placeholder="feedback if any . . ."
+          ></textarea>
+          <br />
+          <input type="submit" value="Submit" />
+        </form>
+      </footer>
+    </div>
+  </body>
+</html>
