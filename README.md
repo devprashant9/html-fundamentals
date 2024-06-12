@@ -5,7 +5,7 @@ If you are a complete beginners and wish to become a "Web Developer" in future t
 
 ---
 
-This is what I made after this tutorial. <a href="https://unique-bee.static.domains/03_Portfolio.html">First Web Page</a>
+This is what I made after this tutorial. <a href="https://unique-bee.static.domains/03_Portfolio.html" target="_blank">First Web Page</a>
 
 ---
 <div align="center">
